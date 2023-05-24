@@ -25,6 +25,9 @@ public class MainActivity extends AppCompatActivity {
         smartTabLayout = findViewById(R.id.viewPagerTab);
         viewPager = findViewById(R.id.viewPager);
 
+        //Diminuindo a sombra do ActionBar
+        getSupportActionBar().setElevation(0);
+
         // Configurar o Adapter para as abas
         FragmentPagerItemAdapter adapter = new FragmentPagerItemAdapter(getSupportFragmentManager(),
                 FragmentPagerItems.with(this)
@@ -52,4 +55,7 @@ public class MainActivity extends AppCompatActivity {
 * Vamos configurar o Adapter para as abas. O método with() recebe o contexto do layout. O método add()
 * adiciona as abas, ele recebe como parametro o nome da aba e o fragment que vai ser carregado ao clicar
 * na aba. Entretanto, vamos criar primeiro os Fragments para as abas.
+*
+* Vamos diminuir a elevação da sombra no actionBar, para isso vamos utilizar o método getSupportActionBar() e
+* o método setElevation.
 * */
